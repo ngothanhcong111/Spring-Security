@@ -1,0 +1,12 @@
+-- Thông tin user (username là admin, password là admin@123
+
+insert into user(username,password,enable)
+values('admin','$2a$10$hbxecwitQQ.dDT4JOFzQAulNySFwEpaFLw38jda6Td.Y/cOiRzDFu',true);
+--password là admin@123
+insert into user(username,password,enable)
+values('user','$2a$10$hbxecwitQQ.dDT4JOFzQAulNySFwEpaFLw38jda6Td.Y/cOiRzDFu',true);
+
+-- Role của user
+insert into authorities(username,authority) values('admin','ROLE_ADMIN');
+insert into authorities(username,authority) values('user','ROLE_USER');
+insert into authorities(username,authority) values('member','ROLE_UNKNOW');
